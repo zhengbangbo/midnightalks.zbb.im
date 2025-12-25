@@ -5,7 +5,6 @@ import { createApp } from 'vue'
 import { createHead } from '@vueuse/head'
 import lazyPlugin from 'vue3-lazy'
 import { LoadingPlugin } from 'vue-loading-overlay'
-import VueGtag from 'vue-gtag'
 import App from './App.vue'
 import loading from './assets/logo.jpg'
 import error from './assets/not-found.jpg'
@@ -25,11 +24,6 @@ async function setupApp() {
   app.use(pinia)
   app.use(head)
   app.use(LoadingPlugin)
-  if (process.env.NODE_ENV === 'production') {
-    app.use(VueGtag, {
-      config: { id: 'G-Q6B45EX2W4' },
-    })
-  }
   app.use(lazyPlugin, {
     loading,
     error,
