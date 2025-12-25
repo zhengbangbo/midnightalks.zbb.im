@@ -5,6 +5,7 @@
     --text-color: #333;
     background: linear-gradient(90deg, #021830 0%, #f37715 100%);
     font-family: "Smiley Sans", "SmileySansFile", sans-serif;
+    text-autospace: normal;
 }
 
 @font-face {
